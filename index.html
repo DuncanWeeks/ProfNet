@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<{% block content %}
+<h1>Homepage</h1>
+
+<p>Profnet allows you to showcase your work, your talents or hobbies</p>
+
+{% if user.is_authenticated %}
+    Hello {{ user.username }}
+    <p><a href  = "{% url 'logout' %}">Log Out</a></p>
+{% else %}
+    <p>You need to log in</p>
+    <a href = "{% url 'login' %}">Log in</a>
+    <a href = "{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock content %}

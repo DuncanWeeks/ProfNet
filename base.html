@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Profnet{% endblock title %}</title>
+  </head>
+  <body>
+    <div class='container'>
+      <a href = "{% url 'index' %}">ProfNet</a>-
+      <a href = "{% url 'skills' %}">MySkills</a>
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+</html>
